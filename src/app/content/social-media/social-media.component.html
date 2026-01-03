@@ -15,16 +15,40 @@
 </nav>
 <!-- End Breadcrumb -->
 
-<!-- Content -->
+<!-- Carrusel Version Escritorio -->
+<section class="mt-3 d-none d-lg-block">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="main-gallery d-flex flex-column">
+            <!-- Imagen principal -->
+            <div class="main-image mb-4">
+              <img id="mainDisplay" src="assets/img/KiTechnologie.jpg" class="img-fluid rounded shadow" alt="Imagen principal">
+            </div>
+            <!-- Miniaturas -->
+            <div class="thumbnail-gallery d-flex gap-3 flex-wrap justify-content-start">
+              <img src="assets/img/KiTechnologie.jpg" class="thumb img-thumbnail active" onclick="changeImage(this)">
+              <img src="assets/img/KiPost.jpg" class="thumb img-thumbnail" onclick="changeImage(this)">
+            </div>
+          </div>
+      </div>
+      <div class="col-md-6">
+        <div class=" d-flex flex-column">
+          <h4 class="fw-semibold">Programa de podcasts</h4>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 
-<!-- Carrusel -->
+<!-- Carrusel Version Mobile-->
 <section class="mt-4">
   <div class="container">
     <div class="row">
       <div class="col">
-        <h5 class="fw-bold mb-3">Programa de podcasts</h5>
           <div id="brandingCarousel" class="carousel slide" data-bs-ride="carousel">
+            <h4 class="fw-semibold mb-3">Programa de podcasts</h4>
             <div class="carousel-inner">
               <div class="carousel-item active">
                 <img src="assets/img/KiTechnologie.jpg" class="d-block w-100" alt="Slide 1">
@@ -64,7 +88,7 @@
     <div class="tab-content p-3 border-top-0 rounded-bottom" id="brandingTabsContent">
       <div class="tab-pane fade show active" id="descripcion" role="tabpanel">
         <p>Diseño de post para la nueva iniciativa de Ki Technologies: el lanzamiento del nuevo programa de podcasts.</p>
-         <h6 class="fw-bold">Acerca de la marca</h6>
+         <h6 class="fw-semibold">Acerca de la marca</h6>
          <p>Ki Technologies es una consultora chilena especializada en soluciones digitales, con más de 27 años de
           experiencia y cerca de 1900 proyectos ejecutados globalmente, Su enfoque es la “Total Experience” (TX),
           que busca diseñar, implementar y potenciar experiencias holísticas para usuarios y clientes mediante metodologías
@@ -84,13 +108,13 @@
 
 <section class="mt-4 mb-5">
   <div class="container">
-    <h5 class="fw-bold mb-3">Proyectos de Social Media</h5>
+    <h5 class="fw-semibold mb-3">Proyectos de Social Media</h5>
     <div class="scroll-cards d-flex flex-nowrap overflow-auto">
       <!-- Card -->
       <div class="card shadow-sm h-100 me-3 flex-shrink-0">
           <img src="assets/img/Evento_DuocUc.jpg" class="card-img-top" alt="Newsletters">
           <div class="card-body">
-            <h6 class="card-title fw-bold">Eventos</h6>
+            <h6 class="card-title fw-semibold">Eventos</h6>
             <p><small class="card-subtitle  mb-2">Nisum</small></p>
             <p class="mb-5">Charlas organizadas por Nisum</p>
             <a href="#" class="Button btn w-100">Ver más</a>
@@ -100,9 +124,9 @@
         <div class="card shadow-sm h-100 me-3 flex-shrink-0">
           <img src="assets/img/Busqueda.jpg" class="card-img-top" alt="Banners">
           <div class="card-body">
-            <h6 class="card-title fw-bold">Búsqueda de empleados</h6>
+            <h6 class="card-title fw-semibold">Búsqueda</h6>
             <p><small class="card-subtitle  mb-2">Nisum</small></p>
-            <p class="mb-5">Campaña de búsqueda de nuevos empleados</p>
+            <p class="mb-5">Búsqueda de nuevos empleados</p>
             <a href="#" class="button btn w-100">Ver más</a>
           </div>
         </div>
@@ -111,9 +135,9 @@
         <div class="card shadow-sm h-100 me-3 flex-shrink-0">
           <img src="assets/img/Desarrollador.jpg" class="card-img-top" alt="Banners">
           <div class="card-body">
-            <h6 class="card-title fw-bold">Campaña de búsqueda</h6>
+            <h6 class="card-title fw-semibold">Campaña de búsqueda</h6>
             <p><small class="card-subtitle  mb-2">Nisum</small></p>
-            <p class="mb-5">Búsqueda de desarrolladores Backend</p>
+            <p class="mb-5">Búsqueda de desarrolladores</p>
             <a href="#" class="button btn w-100">Ver más</a>
           </div>
         </div>

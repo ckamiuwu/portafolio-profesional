@@ -1,9 +1,60 @@
+/* Estilos para la versión escritorio */
+.link-nav{
+  color: #ffffff;
+  font-weight: 400;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  transition: color 0.3s;
+  display: inline-block;
+  position: relative;
+}
+.nav-links li {
+  list-style: none;
+}
 
+.link-nav::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0%;
+  height: 2px;
+  background-color: #8281F5; /* morado */
+  transition: width 0.5s ease-in-out;
+
+}
+.link-nav:hover {
+color: white;
+font-weight: 500;
+
+}
+
+/* Hover: solo muestra línea */
+.link-nav:hover::after {
+  width: 100%;
+}
+.link-nav:active {
+  color: #8281F5;
+}
+
+/* Oculta el menú hamburguesa en escritorio */
+@media (min-width: 992px) {
+  .hamburger {
+    display: none !important;
+  }
+}
+
+/* Muestra el menú hamburguesa solo en móviles */
+@media (max-width: 991.98px) {
+  .navbar-nav.d-lg-flex {
+    display: none !important;
+  }
+}
+/* Estilos para la versión mobile */
 .navbar {
   padding-top: 5%;
   z-index: 1000;
 }
-
 .nav-title {
   font-family: "Prettywise", sans-serif;
   color: #ffff;
@@ -93,11 +144,12 @@
 }
 
 .card-profile{
-  border-radius: 15px;
+  border-radius: 8px;
   background-color: #ffffff;
   border: none;
   position: relative;
   color: #101137;
+  box-shadow: 0px 2px 5px 4px rgba(0, 0, 0, 0.02);
 }
 
 .profile-placeholder {
@@ -105,4 +157,30 @@
   height: 74px;
   background-color: #cccccc;
   border-radius: 8px;
+}
+
+.nav-item {
+  align-items: center;
+  padding: 8px 12px;
+  border-radius: 5px;
+  transition: background-color 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+
+}
+
+.nav-item:hover {
+  background-color: #f4f3fe; /* color suave, ajustable */
+  box-shadow: 0 2px 8px rgba(167, 139, 250, 0.3); /* sombra suave violeta */
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+  color: #8281F5;
+}
+
+.nav-item span {
+  color: #1e1e1e;
+  font-weight: 400;
+  font-size: 14px;
 }

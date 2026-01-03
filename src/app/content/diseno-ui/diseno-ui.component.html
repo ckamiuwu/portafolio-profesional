@@ -14,15 +14,40 @@
     </div>
 </nav>
 <!-- End Breadcrumb -->
+ <section class="mt-3 d-none d-lg-block">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="main-gallery d-flex flex-column">
+            <!-- Imagen principal -->
+            <div class="main-image mb-4">
+              <img id="mainDisplay" src="assets/img/PortadaNisum.jpg" class="img-fluid rounded shadow" alt="Imagen principal">
+            </div>
+            <!-- Miniaturas -->
+            <div class="thumbnail-gallery d-flex gap-3 flex-wrap justify-content-start">
+              <img src="assets/img/PortadaNisum.jpg" class="thumb img-thumbnail active" onclick="changeImage(this)">
+              <img src="assets/img/Revista_Nisum.jpg" class="thumb img-thumbnail" onclick="changeImage(this)">
+              <img src="assets/img/Tarjetas_Nisum.jpg" class="thumb img-thumbnail" onclick="changeImage(this)">
+              <img src="assets/img/Pendon_Nisum.jpg" class="thumb img-thumbnail" onclick="changeImage(this)">
+            </div>
+          </div>
+      </div>
+      <div class="col-md-6">
+        <div class=" d-flex flex-column">
+          <h4 class="fw-semibold">Identidad Corporativa</h4>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-<!-- Content -->
-
+<!-- Carrusel Version Mobile -->
 <section class="mt-4">
   <div class="container">
     <div class="row">
       <div class="col">
-        <h5 class="fw-bold mb-3">Rebranding sitio web </h5>
           <div id="brandingCarousel" class="carousel slide" data-bs-ride="carousel">
+            <h4 class="fw-semibold mb-3">Rebranding sitio web </h4>
             <div class="carousel-inner">
               <div class="carousel-item active">
                 <img src="assets/img/KiTechnologie.jpg" class="d-block w-100" alt="Slide 1">
@@ -86,7 +111,7 @@
 
 <section class="mt-4 mb-5">
   <div class="container">
-    <h5 class="fw-bold mb-3">Proyectos de Diseño UI</h5>
+    <h5 class="fw-semibold mb-3">Proyectos de Diseño UI</h5>
     <div class="scroll-cards d-flex flex-nowrap overflow-auto">
       <!-- Card -->
       <div class="card shadow-sm h-100 me-3 flex-shrink-0">
@@ -95,7 +120,7 @@
             <small class="titulo-etiqueta">Proyecto personal</small>
           </div>
           <div class="card-body">
-            <h6 class="card-title fw-bold">Rebranding versión móvil</h6>
+            <h6 class="card-title fw-semibold">Rebranding versión móvil</h6>
             <p><small class="card-subtitle  mb-2">Alamys</small></p>
             <p class="mb-5">Diseño de rebranding</p>
             <a href="#" class="Button btn w-100">Ver más</a>

@@ -1,67 +1,111 @@
-
- <!-- Breadcrumb -->
+<!-- Breadcrumb -->
 <nav class="mt-4" style="--bs-breadcrumb-divider: '|';">
-    <div class="container">
-      <div class="row">
-        <div class="col">
-          <nav aria-label="breadcrumb" class="ms-2">
-            <ol class="breadcrumb">
-              <li class="breadcrumb-item" aria-current="page">Home</li>
-              <li class="breadcrumb-item active" aria-current="page">Branding</li>
-            </ol>
-          </nav>
-        </div>
-      </div>
-    </div>
-</nav>
-<!-- End Breadcrumb -->
-
-<!-- Content -->
-
-<section class="mt-4">
   <div class="container">
     <div class="row">
       <div class="col">
-        <h5 class="fw-bold mb-3">Identidad Corporativa</h5>
-          <div id="brandingCarousel" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <img src="assets/img/PortadaNisum.jpg" class="d-block w-100" alt="Slide 1">
-              </div>
-              <div class="carousel-item">
-                <img src="assets/img/Revista_Nisum.jpg" class="d-block w-100" alt="Slide 2">
-              </div>
-              <div class="carousel-item">
-                <img src="assets/img/Tarjetas_Nisum.jpg" class="d-block w-100" alt="Slide 3">
-              </div>
-              <div class="carousel-item">
-                <img src="assets/img/Pendon_Nisum.jpg" class="d-block w-100" alt="Slide 4">
-              </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#brandingCarousel" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#brandingCarousel" data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Next</span>
-            </button>
+        <nav aria-label="breadcrumb" class="ms-2">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item" aria-current="page">Home</li>
+            <li class="breadcrumb-item active" aria-current="page">Branding</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+  </div>
+</nav>
+<!-- End Breadcrumb -->
+
+<!-- Carrusel Version Escritorio -->
+<section class="mt-3 d-none d-lg-block">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="main-gallery d-flex flex-column">
+          <!-- Imagen principal -->
+          <div class="main-image mb-4">
+            <img id="mainDisplay" src="{{activeImg}}" class="img-fluid rounded shadow"
+              alt="Imagen principal">
           </div>
+          <!-- Miniaturas -->
+          <div class="thumbnail-gallery d-flex gap-3 flex-wrap justify-content-start">
+            @for (img of imagesSrc; track img) {
+              <img src="{{img}}" class="thumb img-thumbnail" [class.active]="img === activeImg" (click)="changeImage(img)">
+            }
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class=" d-flex flex-column">
+          <h4 class="fw-semibold mb-4">Identidad Corporativa</h4>
+          <p>Proyecto de branding para la consultora Nisum, enfocándome en crear
+            identidades visuales coherentes y efectivas que reflejen la misión
+            y valores de la empresa. </p>
+          <div>
+            <h6 class="fw-semibold mt-2">Acerca de la marca</h6>
+            <small>Nisum es una empresa global líder en comercio digital con sede en California, fundada en
+            el año 2000 bajo el lema "Construyendo el Éxito Juntos". Ofrece una amplia gama de servicios
+            que incluyen estrategia y transformación digital, análisis e inteligencia de datos, blockchain,
+            agilidad empresarial y desarrollo de software personalizado.</small>
+          </div>
+        </div>
+        <div class="program-icons mt-4">
+          <h6 class="fw-semibold mt-2">Herramientas</h6>
+          <img src="assets/img/Logo Ps.svg" alt="Photoshop">
+          <img src="assets/img/Logo Ai.svg" alt="Illustrator">
+          <img src="assets/img/figma.svg" alt="Figma">
+        </div>
       </div>
     </div>
   </div>
 </section>
 
+<!-- Carrusel Version Mobile -->
 <section class="mt-4">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <div id="brandingCarousel" class="carousel slide" data-bs-ride="carousel">
+          <h4 class="fw-semibold mb-4">Identidad Corporativa</h4>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="assets/img/PortadaNisum.jpg" class="d-block w-100" alt="Slide 1">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/img/Revista_Nisum.jpg" class="d-block w-100" alt="Slide 2">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/img/Tarjetas_Nisum.jpg" class="d-block w-100" alt="Slide 3">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/img/Pendon_Nisum.jpg" class="d-block w-100" alt="Slide 4">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#brandingCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#brandingCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Tab Version Mobile -->
+<section class="mt-4 tab-content">
   <div class="container">
     <ul class="nav nav-tabs" id="brandingTabs" role="tablist">
       <li class="nav-item" role="presentation">
-        <button class="nav-link active" id="descripcion-tab" data-bs-toggle="tab" data-bs-target="#descripcion" type="button" role="tab">
+        <button class="nav-link active" id="descripcion-tab" data-bs-toggle="tab" data-bs-target="#descripcion"
+          type="button" role="tab">
           Descripción
         </button>
       </li>
       <li class="nav-item" role="presentation">
-        <button class="nav-link" id="herramientas-tab" data-bs-toggle="tab" data-bs-target="#herramientas" type="button" role="tab">
+        <button class="nav-link" id="herramientas-tab" data-bs-toggle="tab" data-bs-target="#herramientas" type="button"
+          role="tab">
           Herramientas
         </button>
       </li>
@@ -70,8 +114,8 @@
       <div class="tab-pane fade show active" id="descripcion" role="tabpanel">
         <p>Proyecto de branding para la consultora Nisum, enfocándome en crear
           identidades visuales coherentes y efectivas que reflejen la misión y valores de la empresa. </p>
-         <h6 class="fw-bold">Acerca de la marca</h6>
-         <p>Nisum es una empresa global líder en comercio digital con sede en California, fundada en
+        <h6 class="fw-semibold">Acerca de la marca</h6>
+        <p>Nisum es una empresa global líder en comercio digital con sede en California, fundada en
           el año 2000 bajo el lema "Construyendo el Éxito Juntos". Ofrece una amplia gama de servicios
           que incluyen estrategia y transformación digital, análisis e inteligencia de datos, blockchain,
           agilidad empresarial y desarrollo de software personalizado.</p>
@@ -88,51 +132,51 @@
 </section>
 
 
-<section class="mt-4 mb-5">
+<section class="my-5">
   <div class="container">
-    <h5 class="fw-bold mb-3">Proyectos de Branding</h5>
+    <h5 class="fw-semibold mb-3">Proyectos de Branding</h5>
 
-     <!-- Card -->
+    <!-- Card -->
     <div class="scroll-cards d-flex flex-nowrap overflow-auto">
-      <div class="card shadow-sm h-100 me-3 flex-shrink-0">
-          <img src="assets/img/Newsletter.jpg" class="card-img-top" alt="Newsletters">
-          <div class="card-body">
-            <h6 class="card-title fw-bold">Newsletters</h6>
-            <p><small class="card-subtitle  mb-2">Nisum</small></p>
-            <p class="mb-5">Diseños de newsletters para diversas campañas.</p>
-            <a href="#" class="Button btn w-100">Ver más</a>
-          </div>
+      <div class="card h-100 me-3 flex-shrink-0">
+        <img src="assets/img/Newsletter.jpg" class="card-img-top" alt="Newsletters">
+        <div class="card-body shadow-sm">
+          <h6 class="card-title fw-semibold">Newsletters</h6>
+          <p><small class="card-subtitle  mb-2">Nisum</small></p>
+          <p class="mb-5">Newsletters para diversas campañas.</p>
+          <a href="#" class="Button ver-mas btn w-100">Ver más</a>
+        </div>
       </div>
 
-        <div class="card shadow-sm h-100 me-3 flex-shrink-0">
-          <img src="assets/img/Banner.jpg" class="card-img-top" alt="Banners">
-          <div class="card-body">
-            <h6 class="card-title fw-bold">Banners</h6>
-            <p><small class="card-subtitle  mb-2">Nisum</small></p>
-            <p class="mb-5">Diseños de banners y newsletters.</p>
-            <a href="#" class="button btn w-100">Ver más</a>
-          </div>
+      <div class="card h-100 me-3 flex-shrink-0">
+        <img src="assets/img/Banner.jpg" class="card-img-top" alt="Banners">
+        <div class="card-body">
+          <h6 class="card-title fw-semibold">Banners</h6>
+          <p><small class="card-subtitle  mb-2">Nisum</small></p>
+          <p class="mb-5">Diseños de banners y newsletters.</p>
+          <a href="#" class="button ver-mas btn w-100">Ver más</a>
         </div>
+      </div>
 
-        <div class="card shadow-sm h-100 me-3 flex-shrink-0">
-          <img src="assets/img/TarjetaKi.jpg" class="card-img-top" alt="Banners">
-          <div class="card-body">
-            <h6 class="card-title fw-bold">Tarjeta</h6>
-            <p><small class="card-subtitle  mb-2">Kitechnologies</small></p>
-            <p class="mb-5">Diseño de tarjeta con la nueva estrategia de marca.</p>
-            <a href="#" class="button btn w-100">Ver más</a>
-          </div>
+      <div class="card h-100 me-3 flex-shrink-0">
+        <img src="assets/img/TarjetaKi.jpg" class="card-img-top" alt="Banners">
+        <div class="card-body">
+          <h6 class="card-title fw-semibold">Tarjeta</h6>
+          <p><small class="card-subtitle  mb-2">Kitechnologies</small></p>
+          <p class="mb-5">Tarjeta con la nueva estrategia de marca.</p>
+          <a href="#" class="button ver-mas btn w-100">Ver más</a>
         </div>
+      </div>
 
-        <div class="card shadow-sm h-100 me-3 flex-shrink-0">
-          <img src="assets/img/Newsletter_Ki.jpg" class="card-img-top" alt="Banners">
-          <div class="card-body">
-            <h6 class="card-title fw-bold">Newsletters</h6>
-            <p><small class="card-subtitle  mb-2">Kitechnologies</small></p>
-            <p class="mb-5">Diseño con la nueva estrategia de marca.</p>
-            <a href="#" class="button btn w-100">Ver más</a>
-          </div>
+      <div class="card h-100 me-3 flex-shrink-0">
+        <img src="assets/img/Newsletter_Ki.jpg" class="card-img-top" alt="Banners">
+        <div class="card-body">
+          <h6 class="card-title fw-semibold">Newsletters</h6>
+          <p><small class="card-subtitle  mb-2">Kitechnologies</small></p>
+          <p class="mb-5">Diseño con la nueva estrategia de marca.</p>
+          <a href="#" class="button ver-mas btn w-100">Ver más</a>
         </div>
+      </div>
     </div>
   </div>
 </section>

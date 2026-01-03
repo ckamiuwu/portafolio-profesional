@@ -1,5 +1,23 @@
 .footer-gradient {
-  background: linear-gradient(135deg, #8e9dfc, #b993f9);
+  background-color: #8281F5;
+  color: #fff;
+
+}
+.main-content{
+  max-width: 120rem;
+  margin: auto;
+  width: 65%;
+   display: flex;
+  justify-content: space-between;
+  padding: 6rem 0;
+
+}
+.icon-list{
+  list-style: none;
+}
+.icon{
+  height: 24px;
+  width: 24px;
 }
 
 .footer-divider{
@@ -10,8 +28,3 @@
   margin: 0 auto;
 }
 
-.btn-icon{
-  width: 30px;
-  height: 30px;
-  filter: brightness(0) invert(1);
-}
