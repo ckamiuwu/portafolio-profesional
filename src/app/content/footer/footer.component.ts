@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { version as appVersion } from '../../../../package.json';
 
 
 @Component({
@@ -9,5 +10,6 @@ import { Component } from '@angular/core';
 })
 
 export class FooterComponent {
+  public version: string = appVersion;
 
 }
