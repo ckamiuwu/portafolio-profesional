@@ -8,6 +8,7 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "start:local": "ng serve --host=0.0.0.0"
+    "build:gh": "ng build --configuration production && mv docs/browser/* docs/ && rm -r docs/browser",
   },
   "private": true,
   "dependencies": {
@@ -36,4 +37,5 @@
     "karma-jasmine-html-reporter": "~2.1.0",
     "typescript": "~5.7.2"
   }
+  "deploy:gh": "npm run build:gh && git add docs && git commit -m \"chore: build site to docs\" && git push origin main"
 }
