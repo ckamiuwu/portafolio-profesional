@@ -12,6 +12,7 @@
   list-style: none;
 }
 
+/* Hover */
 .link-nav::after {
   content: '';
   position: absolute;
@@ -19,7 +20,7 @@
   bottom: -4px;
   width: 0%;
   height: 2px;
-  background-color: #8281F5; /* morado */
+  background-color: #ffffff; 
   transition: width 0.5s ease-in-out;
 
 }
@@ -159,14 +160,18 @@ font-weight: 500;
   border-radius: 8px;
 }
 
-.nav-item {
+.nav-item a {
+  display: flex;
   align-items: center;
+}
+
+.nav-item {
   padding: 8px 12px;
   border-radius: 5px;
   transition: background-color 0.2s ease, box-shadow 0.2s ease;
   cursor: pointer;
-
 }
+
 
 .nav-item:hover {
   background-color: #f4f3fe; /* color suave, ajustable */
@@ -174,13 +179,12 @@ font-weight: 500;
 }
 
 .icon {
-  width: 20px;
-  height: 20px;
+  font-size: 20px;
   color: #8281F5;
+  line-height: 1;
 }
 
 .nav-item span {
   color: #1e1e1e;
-  font-weight: 400;
   font-size: 14px;
 }
